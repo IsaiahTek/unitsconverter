@@ -13,11 +13,35 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-plugin-whitelist": "^1.3.4"
+    "@vue/compiler-sfc": "^3.0.11",
+    "cordova-android": "^9.1.0",
+    "cordova-plugin-whitelist": "^1.3.4",
+    "laravel-mix": "^6.0.19",
+    "vue-loader": "^16.2.0"
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-whitelist": {}
-    }
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-admob-free": {
+        "ADMOB_APP_ID": "ca-app-pub-4080611919888715~4296423682"
+      }
+    },
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsaiahTek/unitsconverter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IsaiahTek/unitsconverter/issues"
+  },
+  "homepage": "https://github.com/IsaiahTek/unitsconverter#readme",
+  "dependencies": {
+    "cordova-admob-sdk": "0.24.1",
+    "cordova-plugin-admob-free": "0.27.0",
+    "cordova-promise-polyfill": "0.0.2",
+    "vue": "^3.0.11"
   }
 }
