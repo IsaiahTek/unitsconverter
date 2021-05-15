@@ -10,7 +10,8 @@
 </head>
 <body>
 	<header>
-		<h1 class="app-title">QuantUz </h1><div class="title-intro"> Easy to use converter</div>
+		<h3 class="app-title">All Units Converter </h3>
+		<!-- <div class="title-intro"> Easy to use converter</div> -->
 	</header>
 	<div id="app">
 		<div v-if="is_dark_theme" v-html="dark_theme"></div>
@@ -50,6 +51,9 @@
 				<h6 @click="toggle_theme()" class="btn btn-dark">{{theme_type}}</h6>
 			</div>
 		</section>
+		<div v-if="loading" class="overlay">
+
+		</div>
 	</div>
 </body>
 </html>

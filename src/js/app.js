@@ -17,11 +17,11 @@ const converters = {
     'temperature':new TemperatureConverter(),
     'data':new DataConverter(),
 }
-const style = "body{background-color: #00274e;}.app-title{color: white;}input, select{color: #E7E7E7;background-color: #544949;}ul li, select{background-color: #00274e !important;}ul li.active{color: white;}ul li.active,section.conversion-box,.dropdown-btn{background-color: #001325;}section.conversion-box{color: white;border-left: unset;border-radius:5px;}section.nav{color: #ececec;}ul li:nth-child(3n + 1){color:#4dff2d;}ul li:nth-child(3n + 2){color:#55c8f5;}ul li:nth-child(3n){color:#ffc72e}"
+const style = "body{background-color: #00274e;}.app-title{color: white;}input, select{color: #FFFFFF;background-color: #566775;}ul li, select{background-color: #00274e !important;}ul li.active{color: white;}ul li.active,section.conversion-box,.dropdown-btn{background-color: #001325;}section.conversion-box{color: white;border-left: unset;border-radius:5px;}section.nav{color: #ececec;}ul li:nth-child(3n + 1){color:#4dff2d;}ul li:nth-child(3n + 2){color:#55c8f5;}ul li:nth-child(3n){color:#ffc72e}"
 const theme = "<style>"+style+"</style>"
 // CONFIGURE ADDS
 function configAds(){
-	if(admob){
+	if(typeof admob != "undefined"){
 		admob.banner.config({
 			id:'ca-app-pub-4080611919888715/1682896300',
 		})
@@ -45,6 +45,7 @@ createApp({
     el:'#app',
         data(){
             return{
+                loading:false,
                 converters:converters,
                 converter_id:'length',
                 from:'cm',
@@ -67,14 +68,14 @@ createApp({
             this.toggle()
           },
         toggle(){
-            if(admob){
+            if(typeof admob != "undefined"){
                 admob.rewardvideo.prepare()
                 admob.rewardvideo.show()
             }
             return this.show_converters = !this.show_converters;
         },
         toggle_theme(){
-            if(admob){
+            if(typeof admob != "undefined"){
                 admob.rewardvideo.prepare()
                 admob.rewardvideo.show()
             }
