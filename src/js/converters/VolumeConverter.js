@@ -1,11 +1,11 @@
 import Converter from './BaseConverter'
 class VolumeConverter extends Converter{
-	constructor(name, from, to, value){
-		super(name, from, to, value)
+	constructor(from, to, value){
+		super(from, to, value)
 		this.name='Volume Converter'
 	}
 	get units(){
-		return ['cl', 'cm cube', 'ml', 'mm cube', 'litre', 'km cube', 'dl']
+		return ['cl', 'ml', 'cubic cm', 'litre', 'cubic m', 'dl']
 	}
 	get base_from(){
 		return 'cl'
@@ -14,7 +14,7 @@ class VolumeConverter extends Converter{
 		return 'litre'
 	}
 	get base_rate(){
-		return {'ml':1000, 'cl':100, 'dl':10, 'litre':1}
+		return {'ml':1000, 'cl':100, 'dl':10, 'litre':1, 'cubic cm':1, 'cubic m':0.001}
 	}
 }
 export default VolumeConverter

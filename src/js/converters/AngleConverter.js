@@ -1,7 +1,7 @@
 import Converter from './BaseConverter'
 class AngleConverter extends Converter{
-	constructor(name, from, to, value){
-		super(name, from, to, value)
+	constructor(from, to, value){
+		super(from, to, value)
 		this.name='Angle Converter'
 	}
 	get units(){

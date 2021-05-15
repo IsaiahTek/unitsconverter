@@ -14921,12 +14921,12 @@ var AngleConverter = /*#__PURE__*/function (_Converter) {
 
   var _super = _createSuper(AngleConverter);
 
-  function AngleConverter(name, from, to, value) {
+  function AngleConverter(from, to, value) {
     var _this;
 
     _classCallCheck(this, AngleConverter);
 
-    _this = _super.call(this, name, from, to, value);
+    _this = _super.call(this, from, to, value);
     _this.name = 'Angle Converter';
     return _this;
   }
@@ -15003,12 +15003,12 @@ var AreaConverter = /*#__PURE__*/function (_Converter) {
 
   var _super = _createSuper(AreaConverter);
 
-  function AreaConverter(name, from, to, value) {
+  function AreaConverter(from, to, value) {
     var _this;
 
     _classCallCheck(this, AreaConverter);
 
-    _this = _super.call(this, name, from, to, value);
+    _this = _super.call(this, from, to, value);
     _this.name = 'Area Converter';
     return _this;
   }
@@ -15601,12 +15601,12 @@ var VolumeConverter = /*#__PURE__*/function (_Converter) {
 
   var _super = _createSuper(VolumeConverter);
 
-  function VolumeConverter(name, from, to, value) {
+  function VolumeConverter(from, to, value) {
     var _this;
 
     _classCallCheck(this, VolumeConverter);
 
-    _this = _super.call(this, name, from, to, value);
+    _this = _super.call(this, from, to, value);
     _this.name = 'Volume Converter';
     return _this;
   }
@@ -15614,7 +15614,7 @@ var VolumeConverter = /*#__PURE__*/function (_Converter) {
   _createClass(VolumeConverter, [{
     key: "units",
     get: function get() {
-      return ['cl', 'cm cube', 'ml', 'mm cube', 'litre', 'km cube', 'dl'];
+      return ['cl', 'ml', 'cubic cm', 'litre', 'cubic m', 'dl'];
     }
   }, {
     key: "base_from",
@@ -15633,7 +15633,9 @@ var VolumeConverter = /*#__PURE__*/function (_Converter) {
         'ml': 1000,
         'cl': 100,
         'dl': 10,
-        'litre': 1
+        'litre': 1,
+        'cubic cm': 1,
+        'cubic m': 0.001
       };
     }
   }]);
